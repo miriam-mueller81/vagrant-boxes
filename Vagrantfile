@@ -12,9 +12,9 @@ Vagrant.configure("2") do |config|
     config.vm.hostname = "shopware5.local"
 
     config.vm.synced_folder "./ansible", "/ansible"
-    #config.vm.synced_folder "../src", "/home/vagrant/www/shopware", create: true, type: "smb"
-    #config.vm.synced_folder "../src", "/home/vagrant/www/shopware", create: true, type: "nfs"
-    #config.vm.synced_folder "../src", "/home/vagrant/www/shopware", create: true;
+    #config.vm.synced_folder "./src", "/home/vagrant/www/shopware5", create: true, type: "smb"
+    #config.vm.synced_folder "./src", "/home/vagrant/www/shopware5", create: true, type: "nfs"
+    config.vm.synced_folder "./src", "/home/vagrant/www/shopware5", create: true;
 
     config.vm.provider :virtualbox do |vb|
         vb.customize ["modifyvm", :id, "--cpus", 4]
