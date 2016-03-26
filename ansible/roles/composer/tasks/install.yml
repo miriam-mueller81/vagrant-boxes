@@ -1,0 +1,9 @@
+---
+
+- name: install > Download
+  get_url:
+    url:  https://getcomposer.org/composer.phar
+    dest: "{{ composer_bin }}"
+    mode: 0755
+  sudo: yes
+  sudo_user: root
