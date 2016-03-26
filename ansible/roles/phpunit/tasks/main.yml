@@ -1,0 +1,5 @@
+---
+- name: packages
+  shell: >
+      composer global require "phpunit/phpunit=@stable"
+      creates=~/.composer/vendor/bin/phpunit
