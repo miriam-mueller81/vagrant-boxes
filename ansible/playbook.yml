@@ -5,5 +5,8 @@
     - common
     - apache
     - mysql
+    - composer
+    - xdebug
     - phpmyadmin
+    - phpunit
     - shopware
