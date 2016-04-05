@@ -45,8 +45,9 @@
   sudo: yes
 
 - name: Run Ant
-  command: ant -f {{ shopware_install_path }}/build/build.xml build-config build-composer-install build-database build-snippets-deploy
+  command: ant -f {{ shopware_install_path }}/build/build.xml build-config build-composer-install build-database build-snippets-deploy build-unit
     creates={{ shopware_install_path }}/engine/Shopware/Configs/Custom.php
+  sudo: yes
 
 #- name: Download demodata
 #  get_url:
